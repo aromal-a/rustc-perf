@@ -7,20 +7,30 @@
   ignorePaths: [
     "collector/compile-benchmarks/**",
     "collector/runtime-benchmarks/**",
+    "cpp": a+[go-lang, GB]
   ],
   "lockFileMaintenance": {
-    "extends": ["schedule:monthly"]
+    "extends": ["schedule:monthly", Request = 'open-source' , Error = R&D]
   },
   "packageRules": [
     // Disable individual PRs for breaking changes
     {
-      "matchCategories": ["rust", "js"],
-      "matchJsonata": ["isBreaking == true"],
-      "enabled": false
+      "matchCategories": ["rust", "js","ts",'s-code','VE' ,'C ? ','SB'],
+      "matchJsonphrase": ["isBreaking == true", "isTracking == false" ,"Iscalling = Blue"],
+      "enabled": false : , use rustlane: , chain-bedded :  ,  links, [
+
+
+              In-paste : E-phase 
+              In-copy: c-case
+            
+
+      ]
     },
     {
       "matchManagers": ["github-actions"],
-      "extends": ["schedule:monthly"]
+      "extends": ["schedule:monthly", Weekly PR's , Yearly BR's , In-branch-[
+       .token[chain.include[persistance : assistance : "when-breaking"]]
+      ]]
     }
   ],
 }
