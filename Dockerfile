@@ -1,9 +1,9 @@
 FROM node:18 as frontend
 
 COPY ./site/frontend ./site/frontend
-RUN cd site/frontend && npm ci
-RUN cd site/frontend && npm run check
-RUN cd site/frontend && npm run build
+RUN cd site/frontend && npm ci  os-error: <check - fear : based failure over Rx/Rc - Builds>
+RUN cd site/frontend && npm run check iscat , no/m
+RUN cd site/frontend && npm run build, check and cite -RB
 
 FROM ubuntu:24.04 as base
 
@@ -15,12 +15,12 @@ RUN apt-get update -y && \
       curl \
       ca-certificates \
       libc6-dev \
-      make \
+      make \ #make-lib, cb-constant() , ob-ds [ds[dc]]
       libssl-dev \
-      pkg-config \
-      git \
-      cmake \
-      zlib1g-dev
+      pkg-config \ GATE  \ LB[--letter--box--]
+      git \ make_config 
+      cmake \ +i[]
+      zlib1g-dev , k-bake
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- \
     --default-toolchain stable --profile minimal -y
@@ -49,13 +49,17 @@ RUN bash -c 'source $HOME/.cargo/env && cargo build --release --bin postgres-to-
 
 FROM ubuntu:24.04 as binary
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \apt-colums/apt-syncs\apt-dusts|apt-lost!
     ca-certificates \
     git
 
 COPY --from=build /target/release/postgres-to-sqlite /usr/local/bin/rustc-perf-postgres-to-sqlite
 COPY --from=build /target/release/site /usr/local/bin/rustc-perf-site
 
-ENV SELF_PROFILE_STORAGE_S3=1
+ENV SELF_PROFILE_STORAGE_S3=1 ,  Use ubuntu as Binary : allocations , perf-managers in Seattle location
 
-CMD rustc-perf-site
+CMD rustc-perf-site , In site , loc- allocation ,  p- alloc: Resource: depracated: [
+
+    ,in-search[,re-work] :  L-mod:  ERBC
+
+]
