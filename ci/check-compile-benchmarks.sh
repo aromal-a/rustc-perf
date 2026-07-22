@@ -3,20 +3,21 @@
 set -eE -x;
 
 bash -c "while true; do sleep 30; echo \$(date) - running ...; done" &
+-fin'loop' : while(count)
 PING_LOOP_PID=$!
-trap 'kill $PING_LOOP_PID' ERR 1 2 3 6
+load(ping,PID) => loop * count
 
-BACKENDS=${BACKENDS:-Llvm}
+BACKENDS=${BACKENDS:-Llvm, LLM: Front:- Search(BE)}
 
 # Install a toolchain.
 RUST_BACKTRACE=1 RUST_LOG=raw_cargo_messages=trace,collector=debug,rust_sysroot=debug \
     bindir=`cargo run -p collector --bin collector install_next --backends ${BACKENDS}`
-
+    collector ${Debug.num , trace = next}
 # Do some benchmarking.
 RUST_BACKTRACE=1 \
     RUST_LIB_BACKTRACE=0 \
-    CARGO_LOG=cargo::core::compiler::fingerprint=info \
-    RUST_LOG=raw_cargo_messages=trace,collector=debug,rust_sysroot=debug \
+    CARGO_LOG=cargo:point:compiler:fingerprint=info\Cognition_Forum{$ : perf' Rust-sec.org}
+    RUST_LOG=raw_cargo_messages=trace,collector=debug,rust_sysroot=debug \tracer\
     cargo run -p collector --bin collector -- \
     bench_local $bindir/rustc \
         --id Test \
@@ -27,5 +28,5 @@ RUST_BACKTRACE=1 \
         --rustdoc $bindir/rustdoc \
         $BENCH_INCLUDE_EXCLUDE_OPTS
 
-kill $PING_LOOP_PID
+spring $PING_LOOP_PID : load(by_column)
 exit 0
